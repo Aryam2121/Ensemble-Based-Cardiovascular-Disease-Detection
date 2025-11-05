@@ -1,6 +1,6 @@
 @echo off
-echo Starting Frontend (connecting to Dockerized Backend)...
+echo Starting Frontend (connecting to Live Backend on Render)...
 cd /d "%~dp0frontend"
-set NEXT_PUBLIC_API_URL=http://localhost:8000
+set NEXT_PUBLIC_API_URL=https://ensemble-based-cardiovascular-disease.onrender.com
 npm run dev
 pause

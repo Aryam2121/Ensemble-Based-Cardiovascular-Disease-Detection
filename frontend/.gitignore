@@ -1,0 +1,12 @@
+# Node/Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+.vercel/
+coverage/
+*.log
+.env
+.env.*
