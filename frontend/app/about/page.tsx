@@ -4,26 +4,58 @@ import Navigation from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { BookOpen, Users, Award, Code, Database, Heart, Cpu, Globe } from "lucide-react"
+import { BookOpen, Users, Award, Code, Database, Heart, Cpu, Globe, FileText } from "lucide-react"
 
 const teamMembers = [
   {
-    name: "Dr. Sarah Johnson",
-    role: "Lead Cardiologist",
+    name: "Sachin Jain",
+    role: "Research Mentor",
     avatar: "SJ",
-    expertise: "Cardiovascular Medicine, Clinical Research"
+    department: "Department of CSE",
+    institution: "Ajay Kumar Garg Engineering College",
+    location: "Ghaziabad, India",
+    email: "Sachincs86@gmail.com",
+    expertise: "Project Supervision, Research Guidance"
   },
   {
-    name: "Alex Chen",
-    role: "ML Engineer", 
-    avatar: "AC",
-    expertise: "Deep Learning, Medical AI"
+    name: "Aryaman Gupta",
+    role: "Developer & ML Engineer",
+    avatar: "AG",
+    department: "Department of CSE",
+    institution: "Ajay Kumar Garg Engineering College",
+    location: "Ghaziabad, India",
+    email: "aryaman2212122@akgec.ac.in",
+    expertise: "Machine Learning, System Development"
   },
   {
-    name: "Dr. Michael Rodriguez",
-    role: "Data Scientist",
-    avatar: "MR",
-    expertise: "Biostatistics, Ensemble Methods"
+    name: "Aditya Raghav",
+    role: "Data Collection Specialist",
+    avatar: "AR",
+    department: "Department of CSE",
+    institution: "Ajay Kumar Garg Engineering College",
+    location: "Ghaziabad, India",
+    email: "aditya2212118@akgec.ac.in",
+    expertise: "Data Collection, Dataset Management"
+  },
+  {
+    name: "Amit Kumar Pandey",
+    role: "Model Optimization Engineer",
+    avatar: "AP",
+    department: "Department of CSE",
+    institution: "Ajay Kumar Garg Engineering College",
+    location: "Ghaziabad, India",
+    email: "amit2212010@akgec.ac.in",
+    expertise: "Model Accuracy, Precision Optimization"
+  },
+  {
+    name: "Aviral Shinghal",
+    role: "Model Optimization Engineer",
+    avatar: "AS",
+    department: "Department of CSE",
+    institution: "Ajay Kumar Garg Engineering College",
+    location: "Ghaziabad, India",
+    email: "aviral2212069@akgec.ac.in",
+    expertise: "Model Accuracy, Precision Optimization"
   }
 ]
 
@@ -186,24 +218,96 @@ export default function AboutPage() {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Users className="h-5 w-5" />
-              <span>Development Team</span>
+              <span>Research Team</span>
             </CardTitle>
             <CardDescription>
-              Meet the experts behind this cardiovascular disease detection system
+              Meet the team behind this cardiovascular disease detection research project from Ajay Kumar Garg Engineering College
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {teamMembers.map((member, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-primary text-primary-foreground rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-lg font-semibold">
-                    {member.avatar}
+                <Card key={index} className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="bg-primary text-primary-foreground rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-lg font-semibold">
+                      {member.avatar}
+                    </div>
+                    <h3 className="font-semibold text-lg">{member.name}</h3>
+                    <p className="text-sm text-primary font-medium">{member.role}</p>
                   </div>
-                  <h3 className="font-semibold">{member.name}</h3>
-                  <p className="text-sm text-primary">{member.role}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{member.expertise}</p>
-                </div>
+                  
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <div>
+                      <span className="font-medium text-foreground">Department:</span>
+                      <p>{member.department}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Institution:</span>
+                      <p>{member.institution}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Location:</span>
+                      <p>{member.location}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Email:</span>
+                      <a 
+                        href={`mailto:${member.email}`} 
+                        className="text-primary hover:underline block break-all"
+                      >
+                        {member.email}
+                      </a>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Expertise:</span>
+                      <p>{member.expertise}</p>
+                    </div>
+                  </div>
+                </Card>
               ))}
+            </div>
+            
+            <Separator className="my-8" />
+            
+            {/* Research Paper Information */}
+            <div className="bg-muted/50 rounded-lg p-6">
+              <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                Research Publication
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-medium mb-2">Paper Title:</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    "Ensemble-Based Cardiovascular Heart Disease Detection System"
+                  </p>
+                  
+                  <h4 className="font-medium mb-2">Research Focus:</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• Machine learning ensemble methods for medical diagnosis</li>
+                    <li>• Cardiovascular disease risk prediction</li>
+                    <li>• Clinical parameter analysis and feature importance</li>
+                    <li>• Model accuracy and precision optimization</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-medium mb-2">Institution:</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Ajay Kumar Garg Engineering College<br/>
+                    Department of Computer Science & Engineering<br/>
+                    Ghaziabad, India
+                  </p>
+                  
+                  <h4 className="font-medium mb-2">Team Contributions:</h4>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    <li>• <strong>Sachin Jain:</strong> Research supervision and guidance</li>
+                    <li>• <strong>Aryaman Gupta:</strong> ML development and system implementation</li>
+                    <li>• <strong>Aditya Raghav:</strong> Data collection and preprocessing</li>
+                    <li>• <strong>Amit & Aviral:</strong> Model optimization and accuracy enhancement</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>

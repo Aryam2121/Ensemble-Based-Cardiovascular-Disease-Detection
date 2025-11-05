@@ -1,164 +1,6 @@
-[00:00:02.800] Server  LOG      ✓ Ready in 1800ms
-[00:00:06.636] Server  LOG      ○ Compiling /predict ...
-[00:00:11.613] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <SegmentViewNode type="page" pagePath="/Desktop/d...">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function PredictPage} serverProvidedParams={{...}}>
-        <PredictPage params={Promise} searchParams={Promise}>
-          <div className="min-h-scre...">
-            <Navigation>
-            <main className="py-12 px-4...">
-              <div>
-              <div>
-              <div className="grid lg:gr...">
-                <div>
-                  <PredictionForm onPredict={function handlePredict} loading={false}>
-                    <Card>
-                      <div data-slot="card" className="bg-card te...">
-                        <CardHeader>
-                        <CardContent>
-                          <div data-slot="card-content" className="px-6">
-                            <form onSubmit={function handleSubmit} className="space-y-4">
-                              <div className="grid grid-...">
-                                <div>
-                                  <Label>
-                                  <Input id="age" name="age" type="number" min="0" max="120" value="" ...>
-                                    <input
-                                      type="number"
-                                      data-slot="input"
-                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
-                                      id="age"
-                                      name="age"
-                                      min="0"
-                                      max="120"
-                                      value=""
-                                      onChange={function handleChange}
-                                      placeholder="45"
-                                      required={true}
--                                     fdprocessedid="yac2qq"
-                                    >
-                                <div>
-                                  <Label>
-                                  <select
-                                    id="sex"
-                                    name="sex"
-                                    value="1"
-                                    onChange={function handleChange}
-                                    className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                   fdprocessedid="qncafj"
-                                  >
-                              <div className="grid grid-...">
-                                <div>
-                                  <Label>
-                                  <Input id="trestbps" name="trestbps" type="number" value="" ...>
-                                    <input
-                                      type="number"
-                                      data-slot="input"
-                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
-                                      id="trestbps"
-                                      name="trestbps"
-                                      value=""
-                                      onChange={function handleChange}
-                                      placeholder="120"
-                                      required={true}
--                                     fdprocessedid="p8lhva"
-                                    >
-                                <div>
-                                  <Label>
-                                  <Input id="chol" name="chol" type="number" value="" onChange={function handleChange} ...>
-                                    <input
-                                      type="number"
-                                      data-slot="input"
-                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
-                                      id="chol"
-                                      name="chol"
-                                      value=""
-                                      onChange={function handleChange}
-                                      placeholder="200"
-                                      required={true}
--                                     fdprocessedid="msfhk"
-                                    >
-                              <div className="grid grid-...">
-                                <div>
-                                  <Label>
-                                  <Input id="thalach" name="thalach" type="number" value="" ...>
-                                    <input
-                                      type="number"
-                                      data-slot="input"
-                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
-                                      id="thalach"
-                                      name="thalach"
-                                      value=""
-                                      onChange={function handleChange}
-                                      placeholder="150"
-                                      required={true}
--                                     fdprocessedid="qj9n03"
-                                    >
-                                <div>
-                                  <Label>
-                                  <Input id="oldpeak" name="oldpeak" type="number" step="0.1" value="" ...>
-                                    <input
-                                      type="number"
-                                      data-slot="input"
-                                      className="file:text-foreground placeholder:text-muted-foreground selection:bg-p..."
-                                      id="oldpeak"
-                                      name="oldpeak"
-                                      step="0.1"
-                                      value=""
-                                      onChange={function handleChange}
-                                      placeholder="1.0"
-                                      required={true}
--                                     fdprocessedid="np9zzm"
-                                    >
-                              <div className="grid grid-...">
-                                <div>
-                                  <Label>
-                                  <select
-                                    id="cp"
-                                    name="cp"
-                                    value="0"
-                                    onChange={function handleChange}
-                                    className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                   fdprocessedid="n6aqzwr"
-                                  >
-                                <div>
-                                  <Label>
-                                  <select
-                                    id="exang"
-                                    name="exang"
-                                    value="0"
-                                    onChange={function handleChange}
-                                    className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                   fdprocessedid="swsaob"
-                                  >
-                              <Button type="submit" className="w-full bg-..." disabled={false}>
-                                <button
-                                  data-slot="button"
-                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
-                                  type="submit"
-                                  disabled={false}
--                                 fdprocessedid="pk281"
-                                >
-+                                 Predict Risk
-                ...
-    ...
-
-[00:00:12.540] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:12.540] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/predict","route":"/predict"}
-[00:00:12.540] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/predict color: rgb(120, 120, 120) color: inherit {"dp":"/predict","o":"http://localhost:3000/predict","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762353394506}
-[00:00:15.557] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:04.569] Server  LOG      ✓ Ready in 3.1s
+[00:00:07.618] Server  LOG      ○ Compiling / ...
+[00:00:13.703] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -207,7 +49,7 @@ It can also happen if the client has a browser extension installed which messes 
                                         onChange={function handleChange}
                                         placeholder="45"
                                         required={true}
--                                       fdprocessedid="9wi85r"
+-                                       fdprocessedid="87ulw"
                                       >
                                   <div>
                                     <Label>
@@ -217,7 +59,7 @@ It can also happen if the client has a browser extension installed which messes 
                                       value="1"
                                       onChange={function handleChange}
                                       className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                     fdprocessedid="1hvrb"
+-                                     fdprocessedid="ssm5ni"
                                     >
                                 <div className="grid grid-...">
                                   <div>
@@ -233,7 +75,7 @@ It can also happen if the client has a browser extension installed which messes 
                                         onChange={function handleChange}
                                         placeholder="120"
                                         required={true}
--                                       fdprocessedid="m112k"
+-                                       fdprocessedid="3o6fvh"
                                       >
                                   <div>
                                     <Label>
@@ -248,7 +90,7 @@ It can also happen if the client has a browser extension installed which messes 
                                         onChange={function handleChange}
                                         placeholder="200"
                                         required={true}
--                                       fdprocessedid="ac4k3b"
+-                                       fdprocessedid="lu1hfg"
                                       >
                                 <div className="grid grid-...">
                                   <div>
@@ -264,7 +106,7 @@ It can also happen if the client has a browser extension installed which messes 
                                         onChange={function handleChange}
                                         placeholder="150"
                                         required={true}
--                                       fdprocessedid="b0vooq"
+-                                       fdprocessedid="ky2di"
                                       >
                                   <div>
                                     <Label>
@@ -280,7 +122,7 @@ It can also happen if the client has a browser extension installed which messes 
                                         onChange={function handleChange}
                                         placeholder="1.0"
                                         required={true}
--                                       fdprocessedid="ewcto"
+-                                       fdprocessedid="un5yf6"
                                       >
                                 <div className="grid grid-...">
                                   <div>
@@ -291,7 +133,7 @@ It can also happen if the client has a browser extension installed which messes 
                                       value="0"
                                       onChange={function handleChange}
                                       className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                     fdprocessedid="3rtl7"
+-                                     fdprocessedid="3jpiok"
                                     >
                                   <div>
                                     <Label>
@@ -301,7 +143,7 @@ It can also happen if the client has a browser extension installed which messes 
                                       value="0"
                                       onChange={function handleChange}
                                       className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                     fdprocessedid="sk1o0v"
+-                                     fdprocessedid="d5xe8h"
                                     >
                                 <Button type="submit" className="w-full bg-..." disabled={false}>
                                   <button
@@ -309,7 +151,7 @@ It can also happen if the client has a browser extension installed which messes 
                                     className={"inline-flex items-center justify-center gap-2 whitespace-nowrap round..."}
                                     type="submit"
                                     disabled={false}
--                                   fdprocessedid="sewftf"
+-                                   fdprocessedid="ofccn7"
                                   >
 +                                   Predict Risk
                     ...
@@ -324,7 +166,7 @@ It can also happen if the client has a browser extension installed which messes 
                             <button
                               data-slot="button"
                               className={"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm fon..."}
--                             fdprocessedid="nflgbs"
+-                             fdprocessedid="fqn7yk"
                             >
                 ...
                   <div className="grid md:gr...">
@@ -338,7 +180,7 @@ It can also happen if the client has a browser extension installed which messes 
                                 <button
                                   data-slot="button"
                                   className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
--                                 fdprocessedid="b2gha"
+-                                 fdprocessedid="e5jej"
                                 >
                     ...
                       <LinkComponent href="/models">
@@ -350,7 +192,7 @@ It can also happen if the client has a browser extension installed which messes 
                                 <button
                                   data-slot="button"
                                   className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
--                                 fdprocessedid="qbnyxb"
+-                                 fdprocessedid="34n6tm"
                                 >
                     ...
                       <LinkComponent href="/about">
@@ -362,155 +204,13 @@ It can also happen if the client has a browser extension installed which messes 
                                 <button
                                   data-slot="button"
                                   className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
--                                 fdprocessedid="04kknu"
+-                                 fdprocessedid="j2yai"
                                 >
               ...
       ...
 
-[00:00:15.669] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:15.670] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:15.670] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762353398351}
-[00:00:25.269] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
-      <SegmentViewNode type="page" pagePath="/Desktop/d...">
-        <SegmentTrieNode>
-        <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-          <Home params={Promise} searchParams={Promise}>
-            <div className="min-h-scre...">
-              <Navigation>
-              <main>
-                <Hero>
-                <section>
-                <section className="py-16 px-4...">
-                  <div>
-                  <div className="grid lg:gr...">
-                    <PredictionForm onPredict={function handlePredict} loading={false}>
-                      <Card>
-                        <div data-slot="card" className="bg-card te...">
-                          <CardHeader>
-                          <CardContent>
-                            <div data-slot="card-content" className="px-6">
-                              <form onSubmit={function handleSubmit} className="space-y-4">
-                                <div>
-                                <div>
-                                <div className="grid grid-...">
-                                  <div>
-                                  <div>
-                                    <Label>
-                                    <Input id="oldpeak" name="oldpeak" type="number" step="0.1" value="" ...>
-                                      <input
-                                        type="number"
-                                        data-slot="input"
-                                        className="file:text-foreground placeholder:text-muted-foreground selection:bg..."
-                                        id="oldpeak"
-                                        name="oldpeak"
-                                        step="0.1"
-                                        value=""
-                                        onChange={function handleChange}
-                                        placeholder="1.0"
-                                        required={true}
--                                       fdprocessedid="r9cbu"
-                                      >
-                                <div className="grid grid-...">
-                                  <div>
-                                    <Label>
-                                    <select
-                                      id="cp"
-                                      name="cp"
-                                      value="0"
-                                      onChange={function handleChange}
-                                      className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                     fdprocessedid="gj0tta"
-                                    >
-                                  <div>
-                                    <Label>
-                                    <select
-                                      id="exang"
-                                      name="exang"
-                                      value="0"
-                                      onChange={function handleChange}
-                                      className="w-full px-3 py-2 border border-input rounded-md bg-background"
--                                     fdprocessedid="xxg4ff"
-                                    >
-                                <Button type="submit" className="w-full bg-..." disabled={false}>
-                                  <button
-                                    data-slot="button"
-                                    className={"inline-flex items-center justify-center gap-2 whitespace-nowrap round..."}
-                                    type="submit"
-                                    disabled={false}
--                                   fdprocessedid="lso6li"
-                                  >
-+                                   Predict Risk
-                    ...
-                <section className="py-16 bg-m...">
-                  <div className="max-w-7xl ...">
-                    <div>
-                    <div>
-                    <div className="text-center">
-                      <LinkComponent href="/models">
-                        <a ref={function} onClick={function onClick} onMouseEnter={function onMouseEnter} ...>
-                          <Button size="lg" className="group">
-                            <button
-                              data-slot="button"
-                              className={"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm fon..."}
--                             fdprocessedid="i43atb"
-                            >
-                ...
-                  <div className="grid md:gr...">
-                    ...
-                      <LinkComponent href="/analytics">
-                        <a ref={function} onClick={function onClick} onMouseEnter={function onMouseEnter} ...>
-                          <CardHeader>
-                          <CardContent>
-                            <div data-slot="card-content" className="px-6">
-                              <Button variant="ghost" className="w-full gro...">
-                                <button
-                                  data-slot="button"
-                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
--                                 fdprocessedid="g3q4rd"
-                                >
-                    ...
-                      <LinkComponent href="/models">
-                        <a ref={function} onClick={function onClick} onMouseEnter={function onMouseEnter} ...>
-                          <CardHeader>
-                          <CardContent>
-                            <div data-slot="card-content" className="px-6">
-                              <Button variant="ghost" className="w-full gro...">
-                                <button
-                                  data-slot="button"
-                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
--                                 fdprocessedid="zda4hce"
-                                >
-                    ...
-                      <LinkComponent href="/about">
-                        <a ref={function} onClick={function onClick} onMouseEnter={function onMouseEnter} ...>
-                          <CardHeader>
-                          <CardContent>
-                            <div data-slot="card-content" className="px-6">
-                              <Button variant="ghost" className="w-full gro...">
-                                <button
-                                  data-slot="button"
-                                  className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded..."}
--                                 fdprocessedid="til0fso"
-                                >
-              ...
-      ...
-
-[00:00:25.269] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:25.269] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:25.269] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762353407956}
-[00:01:06.681] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/predict color: rgb(120, 120, 120) color: inherit {"dp":"/predict","o":"http://localhost:3000/predict","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762353449290}
-[00:01:12.470] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762353455103}
-[00:01:20.678] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/models color: rgb(120, 120, 120) color: inherit {"dp":"/models","o":"http://localhost:3000/models","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762353463029}
+[00:00:13.703] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:13.703] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:13.703] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762368070435}
+[00:00:19.795] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/about color: rgb(120, 120, 120) color: inherit {"dp":"/about","o":"http://localhost:3000/about","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762368076631}
+[00:00:51.078] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1762368107859}
